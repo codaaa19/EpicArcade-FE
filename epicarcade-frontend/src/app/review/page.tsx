@@ -1,18 +1,43 @@
-import Link from "next/link";
+// src/app/review/page.tsx
 import React from 'react';
+import Link from 'next/link';
 
-export default function LabelRegisterPage() {
-    return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <div className="card-body items-center">
-                    <h1 className="card-title text-center mb-5">Register</h1>
-                    <div className="card-actions w-1/2 gap-y-3 justify-center items-center flex-col">
-                        <Link href="/auth/register/user" className="btn text-white font-bold w-full btn-primary">Pengguna</Link>
-                        <Link href="/auth/register/label" className="btn text-white font-bold w-full btn-primary">Label</Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+export default function ReviewPage(){
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.title}>Review page</h1>
+      <div style={styles.buttonContainer}>
+        <Link href="/review/add-review">
+          <button style={styles.button}>Add your review</button>
+        </Link>
+        <Link href="/review/all-review">
+          <button style={styles.button}>See all reviews</button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column' as 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    textAlign: 'center' as 'center',
+  },
+  title: {
+    marginBottom: '20px',
+    fontSize: '24px',
+  },
+  buttonContainer: {
+    display: 'flex',
+    gap: '10px',
+  },
+  button: {
+    padding: '10px 20px',
+    fontSize: '16px',
+    cursor: 'pointer',
+  },
+};

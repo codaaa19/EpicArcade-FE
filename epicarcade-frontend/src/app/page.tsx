@@ -1,17 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Home: React.FC = () => {
+export default function Home(){
   return (
-    <h1>
-      Hello World
-    </h1>
-    // <div style={styles.container}>
-    //   <h1 style={styles.title}>Home Page</h1>
-    //   <Link href="/review">
-    //     <button style={styles.button}>Go to Review Page</button>
-    //   </Link>
-    // </div>
+    <div style={styles.container}>
+      <h1 style={styles.title}>Home Page</h1>
+      <Link href="/review">
+        <button style={styles.button}>Go to Review Page</button>
+      </Link>
+    </div>
   );
 };
 
@@ -35,4 +32,3 @@ const styles = {
   },
 };
 
-export default Home;
