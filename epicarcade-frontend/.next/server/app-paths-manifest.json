@@ -1,3 +1,4 @@
 {
-  "/review/all-review/page": "app/review/all-review/page.js"
+  "/review/all-review/page": "app/review/all-review/page.js",
+  "/review/page": "app/review/page.js"
 }

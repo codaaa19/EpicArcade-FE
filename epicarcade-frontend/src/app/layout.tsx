@@ -2,8 +2,8 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Your App Title',
-  description: 'Your App Description',
+  title: 'EpicArcade',
+  description: 'Your Favorite Game Store!',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
