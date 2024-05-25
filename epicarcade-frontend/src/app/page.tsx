@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import './homepage.css';
 
 export default function Home(){
   return (

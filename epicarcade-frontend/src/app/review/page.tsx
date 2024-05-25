@@ -12,6 +12,9 @@ export default function ReviewPage(){
         <Link href="/review/all-review">
           <button style={styles.button}>See all reviews</button>
         </Link>
+        <Link href="/">
+          <button style={styles.button}>Home Page</button>
+        </Link>
       </div>
     </div>
   );

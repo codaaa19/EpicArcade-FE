@@ -3,6 +3,7 @@
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
     "/layout": [
@@ -18,8 +19,19 @@
     "/review/all-review/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/review/all-review/page.js",
-      "static/css/app/review/all-review/page.css"
+      "static/css/app/review/all-review/page.css",
+      "static/chunks/app/review/all-review/page.js"
+    ],
+    "/review/add-review/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/review/add-review/page.css",
+      "static/chunks/app/review/add-review/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
