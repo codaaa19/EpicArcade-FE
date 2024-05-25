@@ -1,4 +1,4 @@
-// File: /Users/tsabitcodar/Documents/TKADPRO/epicarcade_frontend/epicarcade-frontend/src/app/review/all-review/page.tsx
+// File: C:\Users\LENOVO\Documents\TKADPROFIX\epicarcade_frontend\epicarcade-frontend\src\app\review\all-review\page.tsx
 import * as entry from '../../../../../src/app/review/all-review/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

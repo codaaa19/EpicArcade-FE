@@ -15,20 +15,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/review/page.js"
     ],
-    "/review/add-review/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/review/add-review/page.js"
-    ],
     "/review/all-review/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/review/all-review/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/review/all-review/page.js",
+      "static/css/app/review/all-review/page.css"
     ]
   }
 }
