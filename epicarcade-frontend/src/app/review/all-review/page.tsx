@@ -8,16 +8,13 @@ export default function AllReviews() {
   const [games, setGames] = useState({});
 
   useEffect(() => {
-    // Fetch reviews
     fetch('http://localhost:8080/reviews/list-reviews')
       .then(response => response.json())
       .then(data => {
         setReviews(data);
-        // Fetch games after reviews are loaded
         fetch('http://localhost:8080/reviews/games')
           .then(response => response.json())
           .then(gamesData => {
-            // Create a dictionary mapping game IDs to game names
             const gamesDict = {};
             gamesData.forEach(game => {
               gamesDict[game.id] = game.name;
@@ -33,6 +30,22 @@ export default function AllReviews() {
       });
   }, []);
 
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:8080/reviews/delete-review/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        throw new Error('HTTP error ' + response.status);
+      }
+
+      setReviews(reviews.filter(review => review.id !== id));
+    } catch (error) {
+      console.error('Error deleting review:', error);
+    }
+  };
+
   return (
     <div className="container">
       <h1>All Reviews</h1>
@@ -40,9 +53,14 @@ export default function AllReviews() {
         reviews.map((review, index) => (
           <div key={index} className="review">
             <h2 className="id-games">Id-game: {games[review.id_game] || review.id_game}</h2>
-            {/* <h2 className="id-asli">Id-Asli: {review.id_game}</h2> */}
             <p>Rating: {review.rating}</p>
             <p>Comment: {review.comment}</p>
+            <button
+              className="delete-button"
+              onClick={() => handleDelete(review.id)}
+            >
+              Delete
+            </button>
           </div>
         ))
       ) : (

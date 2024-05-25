@@ -16,18 +16,6 @@
       "static/chunks/main-app.js",
       "static/css/app/review/all-review/page.css",
       "static/chunks/app/review/all-review/page.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
-    "/review/add-review/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/review/add-review/page.css",
-      "static/chunks/app/review/add-review/page.js"
     ]
   }
 }
