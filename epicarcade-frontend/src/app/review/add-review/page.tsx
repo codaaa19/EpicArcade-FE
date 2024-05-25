@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import './AddReview.css';
 
@@ -8,7 +8,19 @@ export default function AddReview() {
   const [id_game, setIdGame] = useState('');
   const [rating, setRating] = useState('');
   const [comment, setComment] = useState('');
+  const [games, setGames] = useState([]);
   const router = useRouter();
+
+  useEffect(() => {
+    fetch('http://localhost:8080/reviews/games')
+      .then(response => response.json())
+      .then(data => {
+        setGames(data);
+      })
+      .catch(error => {
+        console.error('Error fetching games:', error);
+      });
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -48,10 +60,18 @@ export default function AddReview() {
           <label>
             ID Game:
             <input
+              list="games"
               type="text"
               value={id_game}
               onChange={(e) => setIdGame(e.target.value)}
             />
+            <datalist id="games">
+              {games.map((game) => (
+                <option key={game.id} value={game.id}>
+                  {game.name}
+                </option>
+              ))}
+            </datalist>
           </label>
           <label>
             Rating:
