@@ -10,22 +10,22 @@ export default function AddReview() {
   const [comment, setComment] = useState('');
   const router = useRouter();
 
-  const handleSubmit = async (event: React.FormEvent) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const review = {
       id_game,
       rating,
-      comment
+      comment,
     };
 
     try {
       const response = await fetch('http://localhost:8080/reviews/add-review', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(review)
+        body: JSON.stringify(review),
       });
 
       if (!response.ok) {
@@ -41,23 +41,38 @@ export default function AddReview() {
   };
 
   return (
-    <div className="container">
-      <h1>Add your review</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <label>
-          ID Game:
-          <input type="text" value={id_game} onChange={e => setIdGame(e.target.value)} />
-        </label>
-        <label>
-          Rating:
-          <input type="number" min="1" max="5" value={rating} onChange={e => setRating(e.target.value)} />
-        </label>
-        <label>
-          Comment:
-          <textarea value={comment} onChange={e => setComment(e.target.value)} />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+    <div className="background">
+      <div className="container">
+        <h1>Add your review</h1>
+        <form onSubmit={handleSubmit} className="form">
+          <label>
+            ID Game:
+            <input
+              type="text"
+              value={id_game}
+              onChange={(e) => setIdGame(e.target.value)}
+            />
+          </label>
+          <label>
+            Rating:
+            <input
+              type="number"
+              min="1"
+              max="5"
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
+            />
+          </label>
+          <label>
+            Comment:
+            <textarea
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            />
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
