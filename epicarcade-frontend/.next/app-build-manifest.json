@@ -1,21 +1,27 @@
 {
   "pages": {
-    "/page": [
+    "/review/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/css/app/review/page.css",
+      "static/chunks/app/review/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/layout.js"
     ],
-    "/review/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/review/page.css",
-      "static/chunks/app/review/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
+    "/review/all-review/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/review/all-review/page.css",
+      "static/chunks/app/review/all-review/page.js"
     ],
     "/review/add-review/page": [
       "static/chunks/webpack.js",
