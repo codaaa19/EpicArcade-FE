@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import './SellerForm.css';
 
 export default function SellerRegisterForm() {
@@ -24,7 +24,7 @@ export default function SellerRegisterForm() {
       username,
       email,
       password,
-      role: "3", // role is always 3
+      role: "3",
     };
 
     try {

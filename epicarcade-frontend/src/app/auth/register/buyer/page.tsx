@@ -24,7 +24,7 @@ export default function BuyerRegisterForm() {
       username,
       email,
       password,
-      role: 3, // role is always 3
+      role: "2"
     };
 
     try {
