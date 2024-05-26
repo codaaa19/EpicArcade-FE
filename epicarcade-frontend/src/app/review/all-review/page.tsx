@@ -10,7 +10,6 @@ export default function AllReviews() {
   const [userRole, setUserRole] = useState('');
 
   useEffect(() => {
-    // Retrieve user role from cookies
     const userData = Cookies.get('user');
     if (userData) {
       const user = JSON.parse(userData);
