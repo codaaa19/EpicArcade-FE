@@ -18,7 +18,7 @@ export default function LoginForm() {
     };
 
     try {
-      const response = await fetch('http://localhost:8080/login', {
+      const response = await fetch('34.128.91.126/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
